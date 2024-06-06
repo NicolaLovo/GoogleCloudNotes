@@ -5,6 +5,7 @@
 ## Index
 
 - [Cloud Computing Fundamentals](./ch1-cloud-computing/foundamentals.md)
+- [Google Cloud Fundamentals](./ch2-google-cloud-fundamentals/google-cloud-infrastructure.md)
 
 
 
