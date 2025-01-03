@@ -74,12 +74,40 @@ Help prevent race conditions when multiple users want to update an IAM policy.
 
 Used to avoid breaking current integrations when new features are released
 
+Version 1(default):
+
+- no condition statement
+- supports binding one role to one or more members
+
+Version 2:
+
+- used for google internal use
+
+Version 3:
+
+- supports condition statement
+
 ### Audit Config
 
 Determines which permission types/identities are logged.
 
+IAM&Admin>Audit Logs
+
+> [!IMPORTANT]
+> Do not log everything, since logs can create a huge amount of data that is billed
+
+
+**AuditConfig Logs**:
+
+![alt text](ch4.1-cloud-iam.auditConfigLogs.png)
+
 ## Policy inheritance
 
-Resources inherit policies of their parent. 
+Resources inherit policies of their parent.
 
 Organization > Folder > Project > Resource
+
+
+## Demo
+
+IAM&Admin > IAM
