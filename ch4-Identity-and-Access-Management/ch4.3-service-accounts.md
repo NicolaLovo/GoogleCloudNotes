@@ -45,3 +45,9 @@ For custom accounts we can use instead IAM.
 2. impersonate a service account
 
 
+
+Useful commands:
+
+- `gcloud iam service-accounts list`
+- `gcloud iam service-accounts create ${accountId} --display-name='${displayName}'`
+- `gcloud projects add-iam-policy-binding ${projectId} --member 'serviceAccount:${email}' --role '${role}'`
