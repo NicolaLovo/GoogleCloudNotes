@@ -30,4 +30,7 @@ Global distributed database that stores IP addresses and other resources and loo
 - SOA (Start Of Authority record) -> created when you create your managed zone and specifies the authoritative informations
   - email of the admin, cache TTL...
   - every DNS zone register **must have one** a SOA record by standard
-- 
+
+**DNS Record Set** -> set of DNS records in a zone that have same name and type
+
+- es. NS records that are usually found in pairs
