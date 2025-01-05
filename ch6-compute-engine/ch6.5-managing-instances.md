@@ -82,9 +82,14 @@ VM access for Linux:
 VM access for Windows:
 
 - RDP(Remote Desktop Protocol) for windows
-  - allow firewall rule `tcp:3389`
+  - allow firewall rule `tcp:3389` 
+    - if you want to access from powershell need to allow `tcp:5986`
   - requires setting Windows password -> set by console or gcloud CLI tool
   - login with [RDP chrome extension](https://chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai) or a 3rd party RDP client
+  - Note that windows machines always come with an RDP client installed
+
+> [!NOTE]
+> A Windows machine comes with a preinstalled google cloud shell
 
 #### Modify/Repair
 
