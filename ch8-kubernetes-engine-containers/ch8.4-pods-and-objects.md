@@ -93,7 +93,7 @@ Objects that set deployment rules for pods
 - ensures every node in the cluster runs a copy of a pod
   - useful for logs, monitoring
 
-### JObs
+### Jobs
 
 - used to run a finite task until completion
 
