@@ -1,6 +1,9 @@
 https://youtu.be/jpno8FSqpc8?list=PLrvKqne9ixu0M3H4inDXG0DLYve4SD_Cd
 
 
-18:12:00
 
-https://console.cloud.google.com/
+Terraform:
+
+https://youtu.be/VCayKl82Lt8 36:00
+
+https://youtu.be/7xngnjfIlK4
