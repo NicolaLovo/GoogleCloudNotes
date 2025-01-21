@@ -50,3 +50,12 @@ resource "google_dns_record_set" "website" {
     managed_zone = data.google_dns_managed_zone.dns_zone
     rrdatas = [ google_compute_global_address.website_ip.address ]
 }
+
+# Add the bucket as a CDN backend
+
+resource "google_compute_backend_bucket" "website-backend" {
+  name = "website-backend"
+  bucket_name = google_storage_bucket.website.name
+  description = "Contains files needed for the website"
+  enable_cdn = true
+}
