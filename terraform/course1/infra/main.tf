@@ -1,11 +1,11 @@
 # Bucket to store website
 
 resource "google_storage_bucket" "website" {
-    name = "example-websas"
-    location = "US"
-    public_access_prevention = "unspecified"
+  name                     = "example-websas"
+  location                 = "US"
+  public_access_prevention = "unspecified"
 
-  
+
 }
 
 
@@ -15,7 +15,7 @@ resource "google_storage_object_access_control" "public_rule" {
   object = google_storage_bucket_object.static_site_src.name
   bucket = google_storage_bucket.website.name
   entity = "allUsers"
-  role = "READER"
+  role   = "READER"
 
   # role = "READER"
   # entity = "allUsers"
@@ -24,9 +24,9 @@ resource "google_storage_object_access_control" "public_rule" {
 # upload index.html to bucket
 
 resource "google_storage_bucket_object" "static_site_src" {
-    name = "index.html"
-    source = "../website/index.html"
-    bucket = google_storage_bucket.website.name
+  name   = "index.html"
+  source = "../website/index.html"
+  bucket = google_storage_bucket.website.name
 }
 
 
