@@ -10,7 +10,7 @@ Reasons for quotas:
 
 - protect other gcloud users preventing excessive usage
 - allow resource management
-  
+
 ## Cloud monitoring
 
 Provide metrics to create dashboards, metrics and alerts.
@@ -21,9 +21,11 @@ Not monitored services:
 - cloud storage
 - cloud sql
 
+> [!NOTE]
+> Quotas are updated once a day, so it may take up to 24 hours for changes to take effect.
+
 ## Viewing quotas
 
 - quota page: IAM&Admin > Quotas
 - API dashboard: APIs&Services
 - apis
-

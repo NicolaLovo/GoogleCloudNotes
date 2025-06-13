@@ -15,3 +15,6 @@ Objective: link my billing account to another user so that he can use it to pay 
 Billing > Account management > Add principal
 
 I can create a new user with "Billing Account User" permission. This user will be able to create projects that bill to this account.
+
+> [!IMPORTANT]
+> A billing account can pay for a project in a different organization. Simply add the billing user role to the user in the other organization.

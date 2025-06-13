@@ -11,6 +11,12 @@ IDentity-as-a-Service(IDaaS) solution that centrally manages users and groups:
 - reporting
 - Directory Management
 
+How it works:
+
+- create an account for each user and group
+- use IAM to manage access to resources
+- use Cloud Identity to federate identities with other identity providers like `Active Directory`
+
 ## Device Management
 
 Lets people in any organization access organization data from mobile data while maintaining security. Employees can access data from wherever they are from their device.
@@ -18,7 +24,7 @@ Lets people in any organization access organization data from mobile data while 
 Features:
 
 - whitelist of approved apps
-- push policies on the devices
+- push policies on the devices to protect organization data
 - keep inventory of devices with organization data
 
 ## Security
@@ -38,7 +44,7 @@ Create reports from logs by exporting them to bigQuery.
 
 ## Directory Management
 
-Handles profile information for users, groups, emails.
+Handles profile information for users, groups, emails. Allows to share this data(profile info, calendar...) with other identity providers like `Active Directory`.
 
 ### Active Directory(AD)
 
@@ -50,16 +56,14 @@ Service developed by Microsoft used in most corporate on-premise environments:
 **AD Forest**: hierarchical structure of AD
 **AD Domain**: stores info about members of domain, verifies credentials and access rights
 
-**AD Federation Service**(ADFS): SSO service that links a digital identity stored across multiple identity management systems -> subset of SSO since it handles only authentication 
+**AD Federation Service**(ADFS): SSO service that links a digital identity stored across multiple identity management systems -> subset of SSO since it handles only authentication
 
 ### Google Cloud Directory Sync(GCDS)
 
 ![alt text](ch4.4-cloud-identity.gcds.png)
 
-
-Free tool that syncs users data with Azure Active Directory with `GCDS`.
+Free tool that syncs users data on Azure Active Directory with the cloud.
 
 Synchronization is one-way: from Azure to GC so that Azure AD is the single source of truth.
 
 Google services use ADFS to create a SSO experience.
-

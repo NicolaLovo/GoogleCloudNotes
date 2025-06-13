@@ -3,7 +3,7 @@
 Download, install and authenticate in the cloud sdk.
 
 > [!NOTE]
-> Can have only 1 active account at a time. 
+> Can have only 1 active account at a time.
 
 ## Commands
 
@@ -11,6 +11,7 @@ Download, install and authenticate in the cloud sdk.
 - `gcloud config set account ${account}` -> set active account
 - `gcloud auth revoke ${account}` -> revoke all credentials for an account on my computer
 - `gcloud info` -> find user directory with keys, configs...
+- `gcloud auth application-default login` -> Authorize access to gcloud for application default credentials
 
 ### Configuration
 
@@ -47,5 +48,3 @@ Component of the SDK that offers autocompletion, suggestions, documentation...
 Component: `beta`
 
 Activate shell: `gcloud beta interactive`
-
-

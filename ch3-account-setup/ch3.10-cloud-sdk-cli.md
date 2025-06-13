@@ -2,7 +2,7 @@
 
 Set of command line tools to manage resources through the terminal. Examples:
 
-- gcloud 
+- gcloud
 - gsutil
 - bq
 - kubectl
@@ -11,7 +11,6 @@ Authorize cloud SDK tools. 2 options:
 
 - use a User account -> associated to a user, often used on a single machine
 - service account -> associated to a project and not a specific user, often used on multiple machines
-
 
 ## Built-in commands
 

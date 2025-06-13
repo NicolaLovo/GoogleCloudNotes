@@ -29,8 +29,8 @@ Identity that can access a resource
 - Google account -> an email address that is associated with a Google Account, including gmail.com or other domains
 - service account -> account for an application
 - Google group -> collection of google/service accounts, helps manage users at scale
-- G Suite Domain -> google accounts that have been created in an organization's G Suite account
-- Cloud Identity Domain -> same as G Suite, but users don't have access to G Suite
+- G Suite Domain -> google accounts that have been created in an organization's G Suite account (e.g. @mycompany.com)
+- Cloud Identity Domain -> same as G Suite, but users don't have access to G Suite applications and features
 - AllAuthenticatedUsers -> special identifier for anyone who is authenticated with a Google or service account
 - AllUsers -> special identifier for anyone
 
@@ -54,11 +54,11 @@ ex: `compute.instances.list`
 - custom -> are created per-project or per-organization
   - cannot create a role at a folder level
   - by default only owners can create new roles
+  - do not support all permissions present in predefined roles
   - have a "Launch stage" to keep track of the availability of this role:
     - alpha: in testing
     - beta: tested and awaiting for approval
     - ga: generally available
-
 
 #### Condition
 
@@ -96,7 +96,6 @@ IAM&Admin>Audit Logs
 > [!IMPORTANT]
 > Do not log everything, since logs can create a huge amount of data that is billed
 
-
 **AuditConfig Logs**:
 
 ![alt text](ch4.1-cloud-iam.auditConfigLogs.png)
@@ -106,7 +105,6 @@ IAM&Admin>Audit Logs
 Resources inherit policies of their parent.
 
 Organization > Folder > Project > Resource
-
 
 ## Demo
 

@@ -14,7 +14,7 @@ Query policies:
 
 **Policy limitations**
 
-- 1 policy per resource
+- 1 policy per resource (project, folder, organization)
 - 1 policy can contain up to 1500 members of which at most 250 google groups
 - up to 7 minutes to fully propagate IAM changes
 - 100 conditional role bindings per policy
@@ -34,9 +34,8 @@ Examples:
 Limitations:
 
 - limited to specific services
-- only primitive roles supported
+- primitive/basic roles unsupported
 - members cannot be allUsers or allAuthenticatedUsers
-
 
 ## Edit policy
 

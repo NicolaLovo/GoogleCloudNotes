@@ -1,6 +1,6 @@
 # Cloud shell and editor
 
-Docker container with a persistent 5GB home directory storage. Has a built-in code editor. 
+Ephemeral `e2-small` VM with docker container with a persistent 5GB home directory storage. Has a built-in code editor.
 The instance persists while the user is online, after 1 hour of inactivity, the session is deleted.
 
 ## Environment customization
