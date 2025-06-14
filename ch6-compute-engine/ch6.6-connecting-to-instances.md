@@ -21,10 +21,9 @@ Connect with os-login:
 - `ssh -i ${privateKeyFile} ${googleCloudUserName}@${instanceIPAddress}`
 
 > [!IMPORTANT]
-> Need role `Compute OS Login` to perform OS Login as a normal user 
+> Need role `Compute OS Login` to perform OS Login as a normal user
 > 
 > `Compute OS Admin Login` to give root OS Login
-
 
 ### Option: Block project-wide SSH keys
 
@@ -32,4 +31,3 @@ Connect with os-login:
 
 - can be disabled on an instance by ticking the checkbox *Block project-wide SSH keys*
   - can allow only certain users by adding the SSH key to the instance metadata
-

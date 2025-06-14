@@ -108,3 +108,11 @@ Can be done without shutting down the machine with *Live Migration*:
 Instance can be restarted or deleted
 
 - Cost: resources attached to instance -> static IPs, disks
+
+## Instance live migration
+
+Google can move an instance from one zone to another in the same region without stopping it
+
+- uses the same hardware and network configuration
+- keeps the instance's internal state intact
+- transparent to the guest OS

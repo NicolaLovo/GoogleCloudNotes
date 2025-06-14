@@ -5,7 +5,7 @@
 ### Query instance metadata
 
 > [!IMPORTANT]
-> Metadata can be queries **only** from **inside** the VM. Not from outside(e.g. the gcloud sdk on my pc)
+> Metadata can be queried **only** from **inside** the VM. Not from outside(e.g. the gcloud sdk on my pc)
 
 - ssh into machine
 - `curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/` -> query instance metadata

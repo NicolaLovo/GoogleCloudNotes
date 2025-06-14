@@ -38,6 +38,7 @@ Series:
 
 - E2 -> low cost, day to day computing (web services, apps, dev environments...)
   - lowest price
+  - no sustained use discounts
   - available for custom
 - N-series -> balanced price/performance
   - N1 -> 1st generation
