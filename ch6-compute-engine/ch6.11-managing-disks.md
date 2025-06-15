@@ -21,6 +21,13 @@ If I reboot the device, the block device does not get automatically mounted: nee
     - `UUID=ace244f7-6ca0-4c56-a3c7-ed977b846bba /newpd ext4 defaults,nofail` (without `"`)
 - `sudo mount -a` or restart VM -> mount all partitions available in `fstab`
 
+## Resize disk
+
+`gcloud compute disks resize ${diskName} --size ${newSizeGB} --zone ${zone}` -> resize disk on Google Cloud. Can make it larger, but not smaller.
+
 After resizing disk on Google Cloud need to resize also fileSystem:
 
 - `sudo resize2fs /dev/sdb`
+
+Detach disk: `gcloud compute instances detach-disk ${instanceName} --disk ${diskName} --zone ${zone}`
+

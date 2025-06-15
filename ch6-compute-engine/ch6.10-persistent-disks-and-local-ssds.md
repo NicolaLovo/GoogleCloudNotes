@@ -32,10 +32,11 @@ Network storage devices, accessed as physical disks connected to the VM
   - SSDs that balance performance and costs
   - same maximum IOPS as *pd-ssd*, but lower IOPS per GP
   - ideal for general purpose use
-  - more than 2x faster than *pd-standard*
+  - up to 2x faster than *pd-standard*
 - SSD or *pd-ssd*
   - fastest, but highest price
   - ideal for transactional databases, real-time performance
+  - up to 5x faster than *pd-balanced*
 
 2 geographic options:
 

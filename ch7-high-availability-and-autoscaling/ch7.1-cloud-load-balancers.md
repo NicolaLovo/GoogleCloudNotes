@@ -82,6 +82,7 @@ Global, proxy-based, layer 7 load balancer behind a single external IP
 
 - serve the application worldwide
 - can be external and internal
+- implemented on Google Front End(GFE) infrastructure
 - can give support for HTTPS and SSL
   - need SSL certificates (Google Managed or self-managed)
 - ports 80, 8080, 443(HTTPS)
@@ -99,6 +100,9 @@ Traffic management:
 - content-based load balancing
   - use url maps to select a backend service based on the requested hostname
     - es. /images -> images service; /video -> video service
+
+> [!NOTE]
+> This is the only Layer 7 load balancer in GCP, the others are Layer 4 load balancers.
 
 ### SSL Proxy
 
@@ -128,6 +132,7 @@ Layer 4 load balancer
   - can use SSL for security by providing a certificate
   - supports many TCP ports (es. 25 -> SMTP)
 - IPv4 and IPv6 support: same as HTTP load balancer
+  - IPv6 traffic terminates at the Load balancer and continues as IPv4
 
 ### Network Load Balancer
 

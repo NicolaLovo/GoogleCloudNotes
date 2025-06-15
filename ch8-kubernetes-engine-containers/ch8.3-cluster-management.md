@@ -101,5 +101,3 @@ Nodes upgrade:
     - the higher, the more disruptive it is
 - during the upgrade GKE brings down at most `max-surge-upgrade + max-unavailable-upgrade` nodes
 
-## Pods
-

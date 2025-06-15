@@ -4,8 +4,7 @@ Backup and restore data of persistent disks
 
 Global resources
 
-- a backup can be accessed by any resource inside the same project
-- can also be shared across projects
+- a backup can be accessed by any resource inside the same project, **can also be shared across projects**
 - support zonal and regional Persistent Disks(PD)
 - snapshots are incremental and automatically compressed
 - stored in Cloud Storage in regional or multi-regional location
@@ -26,6 +25,9 @@ When a snapshot is deleted, if there are other snapshots that depend on it:
 
 - any data required to restore the snapshot is moved to the next snapshot, increasing its size
 
+> [!NOTE]
+> If the disk has a snapshot schedule, you must before detach the schedule from the disk before deleting the snapshot.
+
 ### Scheduled snapshots
 
 - best practice for backups
@@ -38,22 +40,27 @@ When a snapshot is deleted, if there are other snapshots that depend on it:
 
 Define:
 
-- retention policy
+- retention policy -> how long keep the snapshots
+  - can be set to keep a number of snapshots or a time period
 - source disk deletion rule
   - controls what happens to snapshots if the disk is deleted
 
 Limitations:
 
 - a PD can have only one schedule attached at a time
-- to **edit**/delete a schedule, first detach it from all disks
+- to **edit**/**delete** a schedule, first detach it from all disks
 - at most 1 snapshot every 10 minutes
 
 Best practices:
 
-- eliminate excessive snapshots by creating an image and reusing it for the VM
+- eliminate excessive snapshots by creating an image from a snapshot and reusing it for the VM
   - reduce costs
 - set schedule to off-peak hours
 - for windows create VSS(Volume Shadow copy Service) snapshot 
+
+### Using snapshots
+
+Snapshots can be used as a base disk for a new VM. When selecting the OS I can choose a snapshot as the base disk.
 
 ## Demo
 
