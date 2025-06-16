@@ -75,9 +75,17 @@ Metadata Server:
 VM access for Linux:
 
 - SSH -> requires firewall Allow rule on `tcp:22`
-  - Google recommends using OS Login(or 2SV) instead of SSH keys
-    - OS login allows using IAM roles to manage instances -> links linux account to Google identity
-    - if not possible, you can manage SSH key pairs
+- Google recommends using OS Login(or 2SV) instead of SSH keys
+  - OS login allows using IAM roles to manage instances -> links linux account to Google identity
+  - key management centralized via IAM and metadata
+  - allows for better auditability
+  - can enforce 2 factor authentication(2FA)
+
+For os login the following permissions are required:
+
+- `compute.osLogin` -> allows to use OS Login
+- `compute.osAdminLogin` -> allows to use OS Login with root(sudo) privileges
+
 
 VM access for Windows:
 

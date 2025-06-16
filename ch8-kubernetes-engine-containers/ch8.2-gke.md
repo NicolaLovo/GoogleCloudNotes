@@ -89,3 +89,44 @@ GKE manages:
 - automates the kubernetes nodes by launching them as Compute Engine VMs
 - automates software updates
 
+### GKE enterprise
+
+> [!NOTE]
+> It is part of the Google Anthos platform
+
+Has several benefits over GKE standard:
+
+- enterprise-grade SLA
+- shielded GKE nodes and vulnerability scanning
+- 24/7 enterprise support
+- supports hybrid and multi-cloud deployments, letting enterprises run and manage Kubernetes clusters across on-prem, Google Cloud, and other clouds
+- integration with Cloud Operations suite for monitoring, logging...
+
+### GKE Autopilot
+
+Google manages the entire cluster infrastructure. You only manage the workloads.
+
+Benefits:
+
+- no need to provision or maintain nodes
+- cost-efficient: pay only for CPU/memory actually requested, not for the entire VM
+- automatic scaling, updates, and repairs
+
+But, do not choose autopilot if you need:
+
+- full control over the nodes
+- need specific hardware configurations for the nodes
+- use node-level DaemonSets
+
+### Configuring GKE to access Artifact Registry
+
+First, give the GKE node service account access to the Artifact Registry repository with the `roles/artifactregistry.reader` role.
+
+Then simply use the required image in the spec, like this:
+
+```yaml
+    spec:
+      containers:
+      - name: my-container
+        image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+```
