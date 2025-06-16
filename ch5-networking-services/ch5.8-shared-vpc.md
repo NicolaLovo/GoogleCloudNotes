@@ -25,6 +25,11 @@ Limitations:
 
 ## Use cases
 
+- large organizations with multiple teams, projects
+  - e.g. GKE clusters in one project, databases in another
+- centralized network and security management
+- isolation, but with collaboration between teams --> allow communication between projects
+
 ### Simple Shared VPC
 
 ![Shared VPC schema](ch5.8-shared-vpc.shared-vpc-schema.png)
