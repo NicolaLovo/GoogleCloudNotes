@@ -22,8 +22,6 @@ Google Cloud offers several storage options
 
 - Persistent Disk
 
-
-
 ## Docker storage
 
 A docker container has a read/write layer where data is stored by default -> makes data ephemeral

@@ -46,11 +46,15 @@ Store data between many different regions
 
 ## Filestore
 
-Managed NFS file server
+Fully managed NFS server. Acts like a drive that VMs and GKE nodes can mount
+
 NFSv3 compliant
 Store data from running applications, VM instances and Kubernetes clusters
 
-Allow multiple instances to access the same data
+Allow multiple instances to access the same data, but **not the same file at the same time** (for that use Cloud Storage)
+
+> [!IMPORTANT]
+> Filestore is regional only, not global.
 
 
 ## Persistent Disks
