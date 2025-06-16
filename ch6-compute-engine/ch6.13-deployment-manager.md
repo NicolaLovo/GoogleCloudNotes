@@ -1,4 +1,4 @@
-# Deployment manager
+# Deployment manager or Cloud Foundation Toolkit
 
 Infrastructure as Code tool: automate deployment of Google Cloud resources
 
