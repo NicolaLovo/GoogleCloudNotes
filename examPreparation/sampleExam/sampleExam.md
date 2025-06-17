@@ -1,13 +1,13 @@
 # Sample Exam Questions
 
-9. You are deploying an application to App Engine. You want the number of instances to scale based on request rate. You need at least 3 unoccupied instances at all times. Which scaling type should you use?
+1. You are deploying an application to App Engine. You want the number of instances to scale based on request rate. You need at least 3 unoccupied instances at all times. Which scaling type should you use?
 
 - [ ] Manual Scaling with 3 instances.
 - [ ] Basic Scaling with min_instances set to 3.
 - [ ] Basic Scaling with max_instances set to 3.
 - [ ] Automatic Scaling with min_idle_instances set to 3.
 
-1.  You have a development project with appropriate IAM roles defined. You are creating a production project and want to have the same IAM roles on the new project, using the fewest possible steps. What should you do?
+2. You have a development project with appropriate IAM roles defined. You are creating a production project and want to have the same IAM roles on the new project, using the fewest possible steps. What should you do?
 
 - [ ] Use gcloud iam roles copy and specify the production project as the destination project.
 - [ ] Use gcloud iam roles copy and specify your organization as the destination organization.
@@ -188,7 +188,7 @@
     Google account to which you can grant specific user-based access privileges. You want to use the most secure method
     that requires the fewest steps. What should you do?
 
-- [ ] Create a signed URL with a four-hour expiration and share the URL with the company. 
+- [ ] Create a signed URL with a four-hour expiration and share the URL with the company.
 - [ ] Set object access to 'public' and use object lifecycle management to remove the object after four hours.
 - [ ] Configure the storage bucket as a static website and furnish the object's URL to the company. Delete the object from
   the storage bucket after four hours.
@@ -200,7 +200,7 @@
     Google account to which you can grant specific user-based access privileges. You want to use the most secure method
     that requires the fewest steps. What should you do?
 
-- [ ] Create a signed URL with a four-hour expiration and share the URL with the company. 
+- [ ] Create a signed URL with a four-hour expiration and share the URL with the company.
 
 - [ ] Set object access to 'public' and use object lifecycle management to remove the object after four hours.
 
@@ -215,7 +215,7 @@
     monitoring solution. What should you do?
 
 - [ ] Deploy the monitoring pod in a StatefulSet object.
-- [ ] Deploy the monitoring pod in a DaemonSet object. 
+- [ ] Deploy the monitoring pod in a DaemonSet object.
 - [ ] Reference the monitoring pod in a Deployment object.
 - [ ] Reference the monitoring pod in a cluster initializer at the GKE cluster creation time.
 
@@ -223,7 +223,7 @@
     currently disabled. You will use a service account to authenticate your application to the API. You want to make
     sure your application can use Cloud Pub/Sub. What should you do?
 
-- [ ] Enable the Cloud Pub/Sub API in the API Library on the GCP Console. 
+- [ ] Enable the Cloud Pub/Sub API in the API Library on the GCP Console.
 - [ ] Rely on the automatic enablement of the Cloud Pub/Sub API when the Service Account accesses it.
 - [ ] Use Deployment Manager to deploy your application. Rely on the automatic enablement of all APIs used by the
   application being deployed.
@@ -236,7 +236,7 @@
 - [ ] Use Shared VPC to connect all projects, and link Stackdriver to one of the projects.
 - [ ] For each project, create a Stackdriver account. In each project, create a service account for that project and grant
   it the role of Stackdriver Account Editor in all other projects.
-- [ ] Configure a single Stackdriver account, and link all projects to the same account. 
+- [ ] Configure a single Stackdriver account, and link all projects to the same account.
 - [ ] Configure a single Stackdriver account for one of the projects. In Stackdriver, create a Group and add the other
   project names as criteria for that Group.
 
@@ -253,7 +253,7 @@
 
 - [ ] Run gcloud iam roles list. Review the output section.
 - [ ] Run gcloud iam service-accounts list. Review the output section.
-- [ ] Navigate to the project and then to the IAM section in the GCP Console. Review the members and roles. 
+- [ ] Navigate to the project and then to the IAM section in the GCP Console. Review the members and roles.
 - [ ] Navigate to the project and then to the Roles section in the GCP Console. Review the roles and status.
 
 36. You need to create a new billing account and then link it with an existing Google Cloud Platform project.
@@ -262,7 +262,7 @@ What should you do?
 - [ ] Verify that you are Project Billing Manager for the GCP project. Update the existing project to link it to the
   existing billing account.
 - [ ] Verify that you are Project Billing Manager for the GCP project. Create a new billing account and link the new billing
-  account to the existing project. 
+  account to the existing project.
 - [ ] Verify that you are Billing Administrator for the billing account. Create a new project and link the new project to
   the existing billing account.
 - [ ] Verify that you are Billing Administrator for the billing account. Update the existing project to link it to the
@@ -274,7 +274,7 @@ What should you do?
 
 - [ ] Download the private key from the service account, and add it to each VMs custom metadata.
 - [ ] Download the private key from the service account, and add the private key to each VM's SSH keys.
-- [ ] Grant the service account the IAM Role of Compute Storage Admin in the project called proj-vm. 
+- [ ] Grant the service account the IAM Role of Compute Storage Admin in the project called proj-vm.
 - [ ] When creating the VMs, set the service account's API scope for Compute Engine to read/write.
 
 38. You created a Google Cloud Platform project with an App Engine application inside the project. You initially
@@ -286,7 +286,7 @@ What should you do?
 - [ ] Create a second App Engine application in the existing GCP project and specify asia-northeast1 as the region to serve
   your application.
 - [ ] Create a new GCP project and create an App Engine application inside this new project. Specify asia-northeast1 as the
-  region to serve your application. 
+  region to serve your application.
 
 39. You need to grant access for three users so that they can view and edit table data on a Cloud Spanner instance.
     What should you do?
@@ -301,7 +301,7 @@ What should you do?
     stable version of Kubernetes. What should you do?
 
 - [ ] Enable the Node Auto-Repair feature for your GKE cluster.
-- [ ] Enable the Node Auto-Upgrades feature for your GKE cluster. 
+- [ ] Enable the Node Auto-Upgrades feature for your GKE cluster.
 - [ ] Select the latest available cluster version for your GKE cluster.
 - [ ] Select ג€Container-Optimized OS (cos)ג€ as a node image for your GKE cluster.
 
@@ -309,7 +309,7 @@ What should you do?
     session. The instance group is used to serve a public web application over HTTPS. You want to follow
     Google-recommended practices. What should you do?
 
-- [ ] Configure an HTTP(S) load balancer. 
+- [ ] Configure an HTTP(S) load balancer.
 - [ ] Configure an internal TCP load balancer.
 - [ ] Configure an external SSL proxy load balancer.
 - [ ] Configure an external TCP proxy load balancer.
@@ -319,7 +319,7 @@ What should you do?
     Gbps as possible to transfer the file rapidly. How should you upload the file?
 
 - [ ] Use the GCP Console to transfer the file instead of gsutil.
-- [ ] Enable parallel composite uploads using gsutil on the file transfer. 
+- [ ] Enable parallel composite uploads using gsutil on the file transfer.
 - [ ] Decrease the TCP window size on the machine initiating the transfer.
 - [ ] Change the storage class of the bucket from Nearline to Multi-Regional.
 
@@ -335,7 +335,7 @@ What should you do?
 
 - [ ] Store the database password inside the Docker image of the container, not in the YAML file.
 - [ ] Store the database password inside a Secret object. Modify the YAML file to populate the DB_PASSWORD environment
-  variable from the Secret. 
+  variable from the Secret.
 - [ ] Store the database password inside a ConfigMap object. Modify the YAML file to populate the DB_PASSWORD environment
   variable from the ConfigMap.
 - [ ] Store the database password in a file inside a Kubernetes persistent volume, and use a persistent volume claim to
@@ -353,14 +353,14 @@ What should you do?
 - [ ] Set the maximum number of instances to 1.
 - [ ] Decrease the maximum number of instances to 3.
 - [ ] Use a TCP health check instead of an HTTP health check.
-- [ ] Increase the initial delay of the HTTP health check to 200 seconds. 
+- [ ] Increase the initial delay of the HTTP health check to 200 seconds.
 
 45. You need to select and configure compute resources for a set of batch processing jobs. These jobs take around 2
     hours to complete and are run nightly. You want to minimize service costs. What should you do?
 
 - [ ] Select Google Kubernetes Engine. Use a single-node cluster with a small instance type.
 - [ ] Select Google Kubernetes Engine. Use a three-node cluster with micro instance types.
-- [ ] Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type. 
+- [ ] Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type.
 - [ ] Select Compute Engine. Use VM instance types that support micro bursting.
 
 46. You recently deployed a new version of an application to App Engine and then discovered a bug in the release. You
@@ -368,7 +368,7 @@ What should you do?
 
 - [ ] Run gcloud app restore.
 - [ ] On the App Engine page of the GCP Console, select the application that needs to be reverted and click Revert.
-- [ ] On the App Engine Versions page of the GCP Console, route 100% of the traffic to the previous version. 
+- [ ] On the App Engine Versions page of the GCP Console, route 100% of the traffic to the previous version.
 - [ ] Deploy the original version as a separate application. Then go to App Engine settings and split traffic between
   applications so that the original version serves 100% of the requests.
 
@@ -378,14 +378,14 @@ What should you do?
 - [ ] Check the app.yaml file for your application and check project settings.
 - [ ] Check the web-application.xml file for your application and check project settings.
 - [ ] Go to Deployment Manager and review settings for deployment of applications.
-- [ ] Go to Cloud Shell and run gcloud config list to review the Google Cloud configuration used for deployment. 
+- [ ] Go to Cloud Shell and run gcloud config list to review the Google Cloud configuration used for deployment.
 
 48. You want to configure 10 Compute Engine instances for availability when maintenance occurs. Your requirements state
     that these instances should attempt to automatically restart if they crash. Also, the instances should be highly
     available including during system maintenance. What should you do?
 
 - [ ] Create an instance template for the instances. Set the 'Automatic Restart' to on. Set the 'On-host maintenance' to
-  Migrate VM instance. Add the instance template to an instance group. 
+  Migrate VM instance. Add the instance template to an instance group.
 - [ ] Create an instance template for the instances. Set 'Automatic Restart' to off. Set 'On-host maintenance' to Terminate
   VM instances. Add the instance template to an instance group.
 - [ ] Create an instance group for the instances. Set the 'Autohealing' health check to healthy (HTTP).
@@ -399,7 +399,7 @@ What should you do?
 
 - [ ] Enable Cloud CDN on the website frontend.
 - [ ] Enable 'Share publicly' on the PDF file objects.
-- [ ] Set Content-Type metadata to application/pdf on the PDF file objects. 
+- [ ] Set Content-Type metadata to application/pdf on the PDF file objects.
 - [ ] Add a label to the storage bucket with a key of Content-Type and value of application/pdf.
 
 50. You have a virtual machine that is currently configured with 2 vCPUs and 4 GB of memory. It is running out of
@@ -408,13 +408,13 @@ What should you do?
 - [ ] Rely on live migration to move the workload to a machine with more memory.
 - [ ] Use gcloud to add metadata to the VM. Set the key to required-memory-size and the value to 8 GB .
 - [ ] Stop the VM, change the machine type to n1-standard-8, and start the VM.
-- [ ] Stop the VM, increase the memory to 8 GB, and start the VM. 
+- [ ] Stop the VM, increase the memory to 8 GB, and start the VM.
 
 51. You have production and test workloads that you want to deploy on Compute Engine. Production VMs need to be in a
     different subnet than the test VMs. All the VMs must be able to reach each other over Internal IP without creating
     additional routes. You need to set up VPC and the 2 subnets. Which configuration meets these requirements?
 
-- [ ] Create a single custom VPC with 2 subnets. Create each subnet in a different region and with a different CIDR range. 
+- [ ] Create a single custom VPC with 2 subnets. Create each subnet in a different region and with a different CIDR range.
 - [ ] Create a single custom VPC with 2 subnets. Create each subnet in the same region and with the same CIDR range.
 - [ ] Create 2 custom VPCs, each with a single subnet. Create each subnet in a different region and with a different CIDR range.
 - [ ] Create 2 custom VPCs, each with a single subnet. Create each subnet in the same region and with the same CIDR range.
@@ -422,7 +422,7 @@ What should you do?
 52. You need to create an autoscaling managed instance group for an HTTPS web application. You want to make sure that
     unhealthy VMs are recreated. What should you do?
 
-- [ ] Create a health check on port 443 and use that when creating the Managed Instance Group. 
+- [ ] Create a health check on port 443 and use that when creating the Managed Instance Group.
 - [ ] Select Multi-Zone instead of Single-Zone when creating the Managed Instance Group.
 - [ ] In the Instance Template, add the label 'health-check'.
 - [ ] In the Instance Template, add a startup script that sends a heartbeat to the metadata server.
@@ -434,7 +434,7 @@ What should you do?
 - [ ] Create an IAM entry for each data scientist's user account. 2. Assign the BigQuery jobUser role to the group.
 - [ ] Create an IAM entry for each data scientist's user account. 2. Assign the BigQuery dataViewer user role to the group.
 - [ ] Create a dedicated Google group in Cloud Identity. 2. Add each data scientist's user account to the group. 3. Assign
-  the BigQuery jobUser role to the group. 
+  the BigQuery jobUser role to the group.
 - [ ] Create a dedicated Google group in Cloud Identity. 2. Add each data scientist's user account to the group. 3. Assign
   the BigQuery dataViewer user role to the group.
 
@@ -444,7 +444,7 @@ What should you do?
     Google-recommended practices. What should you do?
 
 - [ ] Create a subnetwork in the same VPC, in europe-west1. 2. Create the new instance in the new subnetwork and use the
-    first instance's private address as the endpoint. 
+    first instance's private address as the endpoint.
 - [ ] Create a VPC and a subnetwork in europe-west1. 2. Expose the application with an internal load balancer. 3. Create
     the new instance in the new subnetwork and use the load balancer's address as the endpoint.
 
@@ -458,7 +458,7 @@ What should you do?
     container emitted a huge number of logs, which resulted in higher costs. You want to disable the logs quickly using
     the minimum number of steps. What should you do?
 
-- [ ] Go to the Logs ingestion window in Stackdriver Logging, and disable the log source for the GKE container resource. 
+- [ ] Go to the Logs ingestion window in Stackdriver Logging, and disable the log source for the GKE container resource.
 - [ ] Go to the Logs ingestion window in Stackdriver Logging, and disable the log source for the GKE Cluster Operations
    resource.
 - [ ] Go to the GKE console, and delete existing clusters. 2. Recreate a new cluster. 3. Clear the option to enable
@@ -471,7 +471,7 @@ What should you do?
 
 - [ ] Deploy the new version in the same application and use the --migrate option.
 - [ ] Deploy the new version in the same application and use the --splits option to give a weight of 99 to the current
-  version and a weight of 1 to the new version. 
+  version and a weight of 1 to the new version.
 - [ ] Create a new App Engine application in the same project. Deploy the new version in that application. Use the App
    Engine library to proxy 1% of the requests to the new version.
 - [ ] Create a new App Engine application in the same project. Deploy the new version in that application. Configure your
@@ -482,7 +482,7 @@ What should you do?
     capacity does not decrease during the deployment. What should you do?
 
 - [ ] Perform a rolling-action start-update with maxSurge set to 0 and maxUnavailable set to 1.
-- [ ] Perform a rolling-action start-update with maxSurge set to 1 and maxUnavailable set to 0. 
+- [ ] Perform a rolling-action start-update with maxSurge set to 1 and maxUnavailable set to 0.
 - [ ] Create a new managed instance group with an updated instance template. Add the group to the backend service for the
    load balancer. When all instances in the new managed instance group are healthy, delete the old managed instance group.
 - [ ] Create a new instance template with the new application version. Update the existing managed instance group with the
@@ -494,6 +494,6 @@ What should you do?
     You need to implement a database solution that can scale with your user growth with minimum configuration changes. Which storage solution should you use?
 
 - [ ] Cloud SQL
-- [ ] Cloud Spanner 
+- [ ] Cloud Spanner
 - [ ] Cloud Firestore
 - [ ] Cloud Datastore
