@@ -5,18 +5,18 @@
 - [ ] Manual Scaling with 3 instances.
 - [ ] Basic Scaling with min_instances set to 3.
 - [ ] Basic Scaling with max_instances set to 3.
-- [ ] Automatic Scaling with min_idle_instances set to 3.
+- [X] Automatic Scaling with min_idle_instances set to 3.
 
 2. You have a development project with appropriate IAM roles defined. You are creating a production project and want to have the same IAM roles on the new project, using the fewest possible steps. What should you do?
 
-- [ ] Use gcloud iam roles copy and specify the production project as the destination project.
+- [X] Use gcloud iam roles copy and specify the production project as the destination project.
 - [ ] Use gcloud iam roles copy and specify your organization as the destination organization.
 - [ ] In the Google Cloud Platform Console, use the 'create role from role' functionality.
 - [ ] In the Google Cloud Platform Console, use the 'create role' functionality and select all applicable permissions.
 
 11. You need a dynamic way of provisioning VMs on Compute Engine. The exact specifications will be in a dedicated configuration file. You want to follow Google's recommended practices. Which method should you use?
 
-- [ ] Deployment Manager
+- [X] Deployment Manager
 - [ ] Cloud Composer
 - [ ] Managed Instance Group
 - [ ] Unmanaged Instance Group
@@ -25,7 +25,7 @@
 
 - [ ] Use kubectl app deploy <dockerfilename>.
 - [ ] Use gcloud app deploy <dockerfilename>.
-- [ ] Create a docker image from the Dockerfile and upload it to Container Registry. Create a
+- [X] Create a docker image from the Dockerfile and upload it to Container Registry. Create a
    Deployment YAML file to point to that image. Use kubectl to create the deployment with that file.
 - [ ] Create a docker image from the Dockerfile and upload it to Cloud Storage. Create a Deployment YAML
    file to point to that image. Use kubectl to create the deployment with that file.
@@ -35,12 +35,12 @@
 - [ ] Download and deploy the Jenkins Java WAR to App Engine Standard.
 - [ ] Create a new Compute Engine instance and install Jenkins through the command line interface.
 - [ ] Create a Kubernetes cluster on Compute Engine and create a deployment with the Jenkins Docker image.
-- [ ] Use GCP Marketplace to launch the Jenkins solution.
+- [X] Use GCP Marketplace to launch the Jenkins solution.
 
 14. You need to update a deployment in Deployment Manager without any resource downtime in the deployment. Which command should you use?
 
 - [ ] gcloud deployment-manager deployments create --config <deployment-config-path>
-- [ ] gcloud deployment-manager deployments update --config <deployment-config-path>
+- [X] gcloud deployment-manager deployments update --config <deployment-config-path>
 - [ ] gcloud deployment-manager resources create --config <deployment-config-path>
 - [ ] gcloud deployment-manager resources update --config <deployment-config-path>
 
@@ -48,7 +48,7 @@
     much it will cost to run the query. You are using on-demand pricing. What should you do?
 
 - [ ] Arrange to switch to Flat-Rate pricing for this query, then move back to on-demand.
-- [ ] Use the command line to run a dry run query to estimate the number of bytes read. Then convert that bytes estimate
+- [X] Use the command line to run a dry run query to estimate the number of bytes read. Then convert that bytes estimate
    to dollars using the Pricing Calculator.
 - [ ] Use the command line to run a dry run query to estimate the number of bytes returned. Then convert that bytes
    estimate to dollars using the Pricing Calculator.
@@ -59,7 +59,7 @@
     scale the application based on underlying infrastructure CPU usage. Your organizational policies require you to use virtual machines directly. You need to ensure that the application scaling is operationally efficient and completed as quickly as possible. What should you do?
 
 - [ ] Create a Google Kubernetes Engine cluster, and use horizontal pod autoscaling to scale the application.
-- [ ] Create an instance template, and use the template in a managed instance group with autoscaling configured.
+- [X] Create an instance template, and use the template in a managed instance group with autoscaling configured.
 - [ ] Create an instance template, and use the template in a managed instance group that scales up and down based on the
    time of day.
 - [ ] Use a set of third-party tools to build automation around scaling the application up and down, based on Stackdriver
@@ -71,12 +71,12 @@
 - [ ] Export your bill to a Cloud Storage bucket, and then import into Cloud Bigtable for analysis.
 - [ ] Export your bill to a Cloud Storage bucket, and then import into Google Sheets for analysis.
 - [ ] Export your transactions to a local file, and perform analysis with a desktop tool.
-- [ ] Export your bill to a BigQuery dataset, and then write time window-based SQL queries for analysis.
+- [X] Export your bill to a BigQuery dataset, and then write time window-based SQL queries for analysis.
 
 18. You need to set up a policy so that videos stored in a specific Cloud Storage Regional bucket are moved to
     Coldline after 90 days, and then deleted after one year from their creation. How should you set up the policy?
 
-- [ ] Use Cloud Storage Object Lifecycle Management using Age conditions with SetStorageClass and Delete actions. Set the
+- [X] Use Cloud Storage Object Lifecycle Management using Age conditions with SetStorageClass and Delete actions. Set the
    SetStorageClass action to 90 days and the Delete action to 275 days (365 ג€" 90)
 - [ ] Use Cloud Storage Object Lifecycle Management using Age conditions with SetStorageClass and Delete actions. Set the
    SetStorageClass action to 90 days and the Delete action to 365 days.
@@ -86,7 +86,7 @@
 19. You have a Linux VM that must connect to Cloud SQL. You created a service account with the appropriate access rights.
     You want to make sure that the VM uses this service account instead of the default Compute Engine service account. What should you do?
 
-- [ ] When creating the VM via the web console, specify the service account under the 'Identity and API Access' section.
+- [X] When creating the VM via the web console, specify the service account under the 'Identity and API Access' section.
 
 - [ ] Download a JSON Private Key for the service account. On the Project Metadata, add that JSON as the value for the key
    compute-engine-service- [ ] account.
@@ -103,14 +103,14 @@
    to log in to the instance.
 - [ ] Set a Windows password in the GCP Console. Verify that a firewall rule for port 22 exists. Click the RDP button in
    the GCP Console and supply the credentials to log in.
-- [ ] Set a Windows username and password in the GCP Console. Verify that a firewall rule for port 3389 exists. Click the
+- [X] Set a Windows username and password in the GCP Console. Verify that a firewall rule for port 3389 exists. Click the
    RDP button in the GCP Console, and supply the credentials to log in.
 
 21. You have one GCP account running in your default region and zone and another account running in a non-default region
     and zone. You want to start a new Compute Engine instance in these two Google Cloud Platform accounts using the command
     line interface. What should you do?
 
-- [ ] Create two configurations using gcloud config configurations create [NAME]. Run gcloud config configurations activate
+- [X] Create two configurations using gcloud config configurations create [NAME]. Run gcloud config configurations activate
    [NAME] to switch between accounts when running the commands to start the Compute Engine instances.
 - [ ] Create two configurations using gcloud config configurations create [NAME]. Run gcloud configurations list to start
    the Compute Engine instances.
@@ -127,7 +127,7 @@
 - [ ] Monitor activity of the Deployment Manager execution on the Stackdriver Logging page of the GCP Console.
 - [ ] Execute the Deployment Manager template against a separate project with the same configuration, and monitor for
    failures.
-- [ ] Execute the Deployment Manager template using the ג€"-preview option in the same project, and observe the state of
+- [X] Execute the Deployment Manager template using the ג€"-preview option in the same project, and observe the state of
    interdependent resources.
 
 23. You are building a pipeline to process time-series data. Which Google Cloud Platform services should you put in
@@ -136,137 +136,98 @@
 - [ ] Cloud Pub/Sub, Cloud Dataflow, Cloud Datastore, BigQuery
 - [ ] Firebase Messages, Cloud Pub/Sub, Cloud Spanner, BigQuery
 - [ ] Cloud Pub/Sub, Cloud Storage, BigQuery, Cloud Bigtable
-- [ ] Cloud Pub/Sub, Cloud Dataflow, Cloud Bigtable, BigQuery
+- [X] Cloud Pub/Sub, Cloud Dataflow, Cloud Bigtable, BigQuery
 
-24. You have a project for your App Engine application that serves a development environment. The required testing has
-    succeeded and you want to create a new project to serve as your production environment. What should you do?
+24. You have a project for your App Engine application that serves a development environment. The required testing has succeeded and you want to create a new project to serve as your production environment. What should you do?
 
-- [ ] Use gcloud to create the new project, and then deploy your application to the new project.
+- [X] Use gcloud to create the new project, and then deploy your application to the new project.
 - [ ] Use gcloud to create the new project and to copy the deployed application to the new project.
 - [ ] Create a Deployment Manager configuration file that copies the current App Engine deployment into a new project.
 - [ ] Deploy your application again using gcloud and specify the project parameter with the new project name to create the new project.
 
-25. You need to configure IAM access audit logging in BigQuery for external auditors. You want to follow
-    Google-recommended practices. What should you do?
+1.  You need to configure IAM access audit logging in BigQuery for external auditors. You want to follow Google-recommended practices. What should you do?
 
-- [ ] Add the auditors group to the 'logging.viewer' and 'bigQuery.dataViewer' predefined IAM roles.
+- [X] Add the auditors group to the 'logging.viewer' and 'bigQuery.dataViewer' predefined IAM roles.
 - [ ] Add the auditors group to two new custom IAM roles.
 - [ ] Add the auditor user accounts to the 'logging.viewer' and 'bigQuery.dataViewer' predefined IAM roles.
 - [ ] Add the auditor user accounts to two new custom IAM roles.
 
-26. You need to set up permissions for a set of Compute Engine instances to enable them to write data into a particular
-    Cloud Storage bucket. You want to follow Google-recommended practices. What should you do?
+1.  You need to set up permissions for a set of Compute Engine instances to enable them to write data into a particular Cloud Storage bucket. You want to follow Google-recommended practices. What should you do?
 
 - [ ] Create a service account with an access scope. Use the access scope '<https://www.googleapis.com/auth/devstorage.write_only>'.
 - [ ] Create a service account with an access scope. Use the access scope '<https://www.googleapis.com/auth/cloud-platform>'.
-- [ ] Create a service account and add it to the IAM role 'storage.objectCreator' for that bucket.
+- [X] Create a service account and add it to the IAM role 'storage.objectCreator' for that bucket.
 - [ ] Create a service account and add it to the IAM role 'storage.objectAdmin' for that bucket.
 
-27. You have sensitive data stored in three Cloud Storage buckets and have enabled data access logging. You want to
-    verify activities for a particular user for these buckets, using the fewest possible steps. You need to verify
-    the addition of metadata labels and which files have been viewed from those buckets. What should you do?
+27. You have sensitive data stored in three Cloud Storage buckets and have enabled data access logging. You want to verify activities for a particular user for these buckets, using the fewest possible steps. You need to verify the addition of metadata labels and which files have been viewed from those buckets. What should you do?
 
-- [ ] Using the GCP Console, filter the Activity log to view the information.
+- [X] Using the GCP Console, filter the Activity log to view the information.
 - [ ] Using the GCP Console, filter the Stackdriver log to view the information.
 - [ ] View the bucket in the Storage section of the GCP Console.
 - [ ] Create a trace in Stackdriver to view the information.
 
-28. You are the project owner of a GCP project and want to delegate control to colleagues to manage buckets and files
-    in Cloud Storage. You want to follow Google- [ ] recommended practices. Which IAM roles should you grant your
-    colleagues?
+1.  You are the project owner of a GCP project and want to delegate control to colleagues to manage buckets and files in Cloud Storage. You want to follow Google-recommended practices. Which IAM roles should you grant yourcolleagues?
 
 - [ ] Project Editor
-
-- [ ] Storage Admin
-
+- [X] Storage Admin
 - [ ] Storage Object Admin
-
 - [ ] Storage Object Creator
 
-29. You have an object in a Cloud Storage bucket that you want to share with an external company. The object contains
-    sensitive data. You want access to the content to be removed after four hours. The external company does not have a
-    Google account to which you can grant specific user-based access privileges. You want to use the most secure method
-    that requires the fewest steps. What should you do?
+1.  You have an object in a Cloud Storage bucket that you want to share with an external company. The object contains sensitive data. You want access to the content to be removed after four hours. The external company does not have a Google account to which you can grant specific user-based access privileges. You want to use the most secure method that requires the fewest steps. What should you do?
 
-- [ ] Create a signed URL with a four-hour expiration and share the URL with the company.
+- [X] Create a signed URL with a four-hour expiration and share the URL with the company.
 - [ ] Set object access to 'public' and use object lifecycle management to remove the object after four hours.
 - [ ] Configure the storage bucket as a static website and furnish the object's URL to the company. Delete the object from
   the storage bucket after four hours.
-- [ ] Create a new Cloud Storage bucket specifically for the external company to access. Copy the object to that bucket.
-  Delete the bucket after four hours have passed.
+- [ ] Create a new Cloud Storage bucket specifically for the external company to access. Copy the object to that bucket. Delete the bucket after four hours have passed.
 
-30. You have an object in a Cloud Storage bucket that you want to share with an external company. The object contains
-    sensitive data. You want access to the content to be removed after four hours. The external company does not have a
-    Google account to which you can grant specific user-based access privileges. You want to use the most secure method
-    that requires the fewest steps. What should you do?
-
-- [ ] Create a signed URL with a four-hour expiration and share the URL with the company.
-
-- [ ] Set object access to 'public' and use object lifecycle management to remove the object after four hours.
-
-- [ ] Configure the storage bucket as a static website and furnish the object's URL to the company. Delete the object from
-  the storage bucket after four hours.
-
-- [ ] Create a new Cloud Storage bucket specifically for the external company to access. Copy the object to that bucket.
-  Delete the bucket after four hours have passed.
-
-31. You are creating a Google Kubernetes Engine (GKE) cluster with a cluster autoscaler feature enabled. You need to
-    make sure that each node of the cluster will run a monitoring pod that sends container metrics to a third-party
-    monitoring solution. What should you do?
+1.  You are creating a Google Kubernetes Engine (GKE) cluster with a cluster autoscaler feature enabled. You need to make sure that each node of the cluster will run a monitoring pod that sends container metrics to a third-party monitoring solution. What should you do?
 
 - [ ] Deploy the monitoring pod in a StatefulSet object.
-- [ ] Deploy the monitoring pod in a DaemonSet object.
+- [X] Deploy the monitoring pod in a DaemonSet object.
 - [ ] Reference the monitoring pod in a Deployment object.
 - [ ] Reference the monitoring pod in a cluster initializer at the GKE cluster creation time.
 
-32. You want to send and consume Cloud Pub/Sub messages from your App Engine application. The Cloud Pub/Sub API is
-    currently disabled. You will use a service account to authenticate your application to the API. You want to make
-    sure your application can use Cloud Pub/Sub. What should you do?
+1.  You want to send and consume Cloud Pub/Sub messages from your App Engine application. The Cloud Pub/Sub API is currently disabled. You will use a service account to authenticate your application to the API. You want to make sure your application can use Cloud Pub/Sub. What should you do?
 
-- [ ] Enable the Cloud Pub/Sub API in the API Library on the GCP Console.
+- [x] Enable the Cloud Pub/Sub API in the API Library on the GCP Console.
 - [ ] Rely on the automatic enablement of the Cloud Pub/Sub API when the Service Account accesses it.
-- [ ] Use Deployment Manager to deploy your application. Rely on the automatic enablement of all APIs used by the
-  application being deployed.
-- [ ] Grant the App Engine Default service account the role of Cloud Pub/Sub Admin. Have your application enable the API on
-  the first connection to Cloud Pub/ Sub.
+- [ ] Use Deployment Manager to deploy your application. Rely on the automatic enablement of all APIs used by the application being deployed.
+- [ ] Grant the App Engine Default service account the role of Cloud Pub/Sub Admin. Have your application enable the API on the first connection to Cloud Pub/ Sub.
 
-33. You need to monitor resources that are distributed over different projects in Google Cloud Platform. You want to
-    consolidate reporting under the same Stackdriver Monitoring dashboard. What should you do?
+1.  You need to monitor resources that are distributed over different projects in Google Cloud Platform. You want to consolidate reporting under the same Stackdriver Monitoring dashboard. What should you do?
 
 - [ ] Use Shared VPC to connect all projects, and link Stackdriver to one of the projects.
-- [ ] For each project, create a Stackdriver account. In each project, create a service account for that project and grant
-  it the role of Stackdriver Account Editor in all other projects.
-- [ ] Configure a single Stackdriver account, and link all projects to the same account.
-- [ ] Configure a single Stackdriver account for one of the projects. In Stackdriver, create a Group and add the other
-  project names as criteria for that Group.
+- [ ] For each project, create a Stackdriver account. In each project, create a service account for that project and grant it the role of Stackdriver Account Editor in all other projects.
+- [X] Configure a single Stackdriver account, and link all projects to the same account.
+- [ ] Configure a single Stackdriver account for one of the projects. In Stackdriver, create a Group and add the other project names as criteria for that Group.
 
-34. You are deploying an application to a Compute Engine VM in a managed instance group. The application must be running
-    at all times, but only a single instance of the VM should run per GCP project. How should you configure the instance
-    group?
+1.  You are deploying an application to a Compute Engine VM in a managed instance group. The application must be running at all times, but only a single instance of the VM should run per GCP project. How should you configure the instance group?
 
 - [ ] Set autoscaling to On, set the minimum number of instances to 1, and then set the maximum number of instances to 1.
-- [ ] Set autoscaling to Off, set the minimum number of instances to 1, and then set the maximum number of instances to 1.
+- [X] Set autoscaling to Off, set the minimum number of instances to 1, and then set the maximum number of instances to 1.
 - [ ] Set autoscaling to On, set the minimum number of instances to 1, and then set the maximum number of instances to 2.
 - [ ] Set autoscaling to Off, set the minimum number of instances to 1, and then set the maximum number of instances to 2.
 
-35. You want to verify the IAM users and roles assigned within a GCP project named my-project. What should you do?
+1.  You want to verify the IAM users and roles assigned within a GCP project named my-project. What should you do?
 
 - [ ] Run gcloud iam roles list. Review the output section.
 - [ ] Run gcloud iam service-accounts list. Review the output section.
-- [ ] Navigate to the project and then to the IAM section in the GCP Console. Review the members and roles.
+- [X] Navigate to the project and then to the IAM section in the GCP Console. Review the members and roles.
 - [ ] Navigate to the project and then to the Roles section in the GCP Console. Review the roles and status.
 
-36. You need to create a new billing account and then link it with an existing Google Cloud Platform project.
-What should you do?
+36. You need to create a new billing account and then link it with an existing Google Cloud Platform project. What should you do?
 
 - [ ] Verify that you are Project Billing Manager for the GCP project. Update the existing project to link it to the
   existing billing account.
-- [ ] Verify that you are Project Billing Manager for the GCP project. Create a new billing account and link the new billing
+- [X] Verify that you are Project Billing Manager for the GCP project. Create a new billing account and link the new billing
   account to the existing project.
 - [ ] Verify that you are Billing Administrator for the billing account. Create a new project and link the new project to
   the existing billing account.
 - [ ] Verify that you are Billing Administrator for the billing account. Update the existing project to link it to the
   existing billing account.
+
+---------------------------------------------------
 
 37. You have one project called proj-sa where you manage all your service accounts. You want to be able to use a
     service account from this project to take snapshots of VMs running in another project called proj-vm. What should
