@@ -18,7 +18,7 @@ Allows to create networks inside google cloud with private and public connectivi
 - Auto Mode
   - the default VPC is an Auto Mode VPC
   - has 1 subnet per region
-  - set of predefined IP rages with /20 CIDR block(can be expanded to /16)
+  - set of predefined IP rages with /20 CIDR block(can be expanded to /8)
 - Custom mode
   - does not automatically create subnets, provides full control
   - an Auto Mode VPC can be converted to Custom mode(not vice versa)
