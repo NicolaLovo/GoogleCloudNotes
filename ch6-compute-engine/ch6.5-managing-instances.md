@@ -86,13 +86,12 @@ For os login the following permissions are required:
 - `compute.osLogin` -> allows to use OS Login
 - `compute.osAdminLogin` -> allows to use OS Login with root(sudo) privileges
 
-
 VM access for Windows:
 
 - RDP(Remote Desktop Protocol) for windows
-  - allow firewall rule `tcp:3389` 
+  - allow firewall rule `tcp:3389`
     - if you want to access from powershell need to allow `tcp:5986`
-  - requires setting Windows password -> set by console or gcloud CLI tool
+  - requires setting Windows password -> set by console or gcloud CLI tool (`gcloud compute reset-windows-password ${instanceName} --zone ${zone}`)
   - login with [RDP chrome extension](https://chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai) or a 3rd party RDP client
   - Note that windows machines always come with an RDP client installed
 

@@ -93,3 +93,7 @@ Series:
 
 > [!IMPORTANT]
 > M1 machines cannot use regional persistent disks
+
+## Spot VMs
+
+Maximum runtime: 24 hours

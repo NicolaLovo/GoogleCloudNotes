@@ -81,6 +81,7 @@ Higher throughput and lower latency than persistent disks
 
 Limitations:
 
+- **can't back up Local SSD disks** with snapshots, clones, machine images, or images
 - each SSD is 375GB
 - can attach at most 24 SSDs
 - data persists until instance is stopped or deleted
