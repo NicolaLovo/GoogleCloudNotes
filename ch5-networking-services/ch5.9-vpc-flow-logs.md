@@ -5,7 +5,7 @@ Records a sample of network flow sent from and received from instances in a VPC 
 > [!NOTE]
 > Only a sample is recorded, about 1 in 10 packets. This cannot be changed
 
-They can be enabled in a subnet-by-subnet basis.
+They can be enabled in a subnet-by-subnet basis(e.g. all instances in a subnet will have flow logs enabled).
 
 Logs storage:
 

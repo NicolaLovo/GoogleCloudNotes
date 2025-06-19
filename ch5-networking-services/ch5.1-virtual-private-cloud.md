@@ -1,6 +1,6 @@
 # Virtual Private Cloud(VPC)
 
-Allows to create networks inside google cloud with private and public connectivity connections.
+Allows to create networks inside google cloud with private and public connectivity.
 
 - Virtualized network within Google Cloud
 - A VPC is a Global resource: not associated with a specific region/zone
@@ -11,10 +11,11 @@ Allows to create networks inside google cloud with private and public connectivi
 - resources within a VPC can communicate with one another by using internal(private) IPv4 addresses
 - support ONLY IPv4 addresses, NOT IPv6
   - but it is possible to create an IPv6 address for a load balancer
-- Each VPC contains a default network 
+- Each VPC contains a default network
   - a default network has a default firewall
 
 2 VPC network types:
+
 - Auto Mode
   - the default VPC is an Auto Mode VPC
   - has 1 subnet per region
@@ -24,14 +25,15 @@ Allows to create networks inside google cloud with private and public connectivi
   - an Auto Mode VPC can be converted to Custom mode(not vice versa)
   - recommended in production
 
+Each VPC has a default route to the internet at `0.0.0.0/0` with the next hop being the default internet gateway.
+
 Example:
 
 ![VPC example](ch5.1-virtual-private-cloud.vpc-example.png)
 
-
 > [!NOTE]
 > VMs in the same network can communicate privately even if they are in different regions.
-> 
+>
 > If two VMs are in same region but different network, they need to communicate with external IPs(unless you use VPC peering or a VPN)
 
 ## Default VPC
@@ -50,7 +52,7 @@ A custom subnet can be created in the default VPC by assigning an IP outside of 
 VPC Network tab
 
 - `gcloud compute networks subnets describe ${network} --region=${region}` -> describe a network subnet
-
+- `gcloud compute networks subnets expand-ip-range ${VPC_name} --region=${region} --prefix-length=${len}` --> expand the IP range of a subnet
 
 ## Deleting the VPC
 
@@ -101,4 +103,3 @@ Every subnet has 4 reserved IPs in its primary range:
 
 > [!NOTE]
 > No reserved IPs in the secondary range
-

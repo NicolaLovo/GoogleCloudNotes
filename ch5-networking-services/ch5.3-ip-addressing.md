@@ -9,7 +9,7 @@ Not publically advertised, used only inside a network. Each VPC has at least one
 Resources with an internal IP communicate with each other privately:
 
 - every VM can have 1 primary IP, unique in the VPC -> assigned when creating the VM, note that it must be in the range of the VPC
-  - if not specified, one is assigned automatically 
+  - if not specified, one is assigned automatically
   - If network is in Auto Mode -> address comes from region subnet (**Auto**)
   - If network is in Custom Mode -> address must be selected manually by choosing the subnet (**Custom**)
 
@@ -61,9 +61,21 @@ Assigning an internal IP, takes that address out of the automatic allocation poo
 
 ## External IP address reservation
 
+Regional IP address:
+
+- can be assigned to resources in that region: VMs, regional network load balancers, etc.
+- `gcloud compute addresses create --addresses ADDRESS_NAME --region REGION`
+
+Global IP address:
+
+- recan be assigned to a global load balancer
+- `gcloud compute addresses create --addresses ADDRESS_NAME --global`
+
 2 ways to handle an external static IP:
 
 1. reserve a specific address and then associate it with a resource
 2. specify an ephemeral external IP for a resource and then promote the address to static
 
+Other useful commands:
 
+- `gcloud compute addresses list`

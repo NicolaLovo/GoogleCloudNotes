@@ -12,7 +12,7 @@ Types of NAT:
 - Dynamic NAT: 1 private IP to 1 public IP in a pool of public addresses
   - used when multiple internal hosts share few public IPs -> the public IPs are assigned dynamically
   - if there are no public IPs available, connection from private IPs is refused until a public IP is available
-- Port Address Translation (PAT) or NAT overload: multiple private IPs to 1 public IP (many-to-one architecture)
+- Port Address Translation (PAT) or NAT overload: multiple private IPs are translated to 1 public IP (many-to-one architecture). Uses port numbers to distinguish between connections.
   - used in home routers
   - used in Google Cloud NAT
 
@@ -24,4 +24,3 @@ The NAT stores an association between (privateIP, privatePort, publicIP, publicP
 
 - when a client performs a request, the NAT allocates a random port in the public IP, adjusts the packet and forwards it
 - when the response is received, the NAT performs the inverse
-

@@ -61,3 +61,20 @@ Any resource can exist ONLY in 1 project, a resource cannot exist in more than o
 Any service resource a project uses
 
 **Labels**: can be assigned to projects/resources to help organize costs
+
+## Structure operations
+
+### Moving project between organizations
+
+Prerequisites:
+
+- Both organizations must be under the same Google Workspace or Cloud Identity domain.
+- Have the roles:
+  - on the project being moved: `roles/resourcemanager.projectMover` or owner
+  - on the organizations: `roles/resourcemanager.organizationAdmin`
+
+Run on the source organization:
+
+```sh
+gcloud beta projects move PROJECT_ID --organization=DESTINATION_ORG_ID
+```
