@@ -1,5 +1,7 @@
 # Creating a GKE cluster
 
+`gcloud container clusters create ${clusterName} --zone ${zone}`
+
 - `gcloud container clusters get-credentials ${clusterName} --zone ${zone}` -> get cluster credentials to use with kubectl
 
 ## Google Container Registry (GCR)

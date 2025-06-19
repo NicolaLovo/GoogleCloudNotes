@@ -13,6 +13,7 @@ Allows connectivity from on-premise to GC VPC network
 
 Use cases:
 
+- A large enterprise connects its main data center to GCP to support a hybrid app platform, needing fast, predictable connectivity.
 - prevent traffic to traverse the public internet
   - dedicated physical connection
 - high-speed
@@ -58,3 +59,8 @@ Use cases:
 - enables certain CDN providers(Akamai, Cloudflare...) to establish an optimized CDN by using direct peering with Google
 - reduced pricing on egress cost
 
+## Exam tip
+
+Cloud VPN = Encrypted + Internet + Quick Setup
+
+Interconnect = Private link + High Performance + SLA

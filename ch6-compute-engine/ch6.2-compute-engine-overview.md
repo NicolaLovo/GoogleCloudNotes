@@ -4,7 +4,7 @@ Infrastructure as a Service (IaaS)
 
 Multiple instance sizes and types:
 
-- per second billing -> consumption-based billing
+- per second billing(after the first minute of activity) -> consumption-based billing
 - launched in a VPC
 - host is available in a Zone
 - each instance is isolated from others

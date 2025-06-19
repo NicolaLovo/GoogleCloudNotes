@@ -32,10 +32,11 @@ Network storage devices, accessed as physical disks connected to the VM
   - SSDs that balance performance and costs
   - same maximum IOPS as *pd-ssd*, but lower IOPS per GP
   - ideal for general purpose use
-  - more than 2x faster than *pd-standard*
+  - up to 2x faster than *pd-standard*
 - SSD or *pd-ssd*
   - fastest, but highest price
   - ideal for transactional databases, real-time performance
+  - up to 5x faster than *pd-balanced*
 
 2 geographic options:
 
@@ -80,6 +81,7 @@ Higher throughput and lower latency than persistent disks
 
 Limitations:
 
+- **can't back up Local SSD disks** with snapshots, clones, machine images, or images
 - each SSD is 375GB
 - can attach at most 24 SSDs
 - data persists until instance is stopped or deleted

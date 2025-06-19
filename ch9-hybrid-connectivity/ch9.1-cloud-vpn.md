@@ -40,6 +40,7 @@ Securely connects your peer network to your VPC through an IPsec VPN connection
 
 ## When to use Cloud VPN
 
+- A small business needs to connect their on-prem app server to GCP for secure nightly backups.
 - public internet access needed
 - when peering location is not available
 - budget constrains

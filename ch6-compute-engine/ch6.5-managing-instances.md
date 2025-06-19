@@ -75,16 +75,23 @@ Metadata Server:
 VM access for Linux:
 
 - SSH -> requires firewall Allow rule on `tcp:22`
-  - Google recommends using OS Login(or 2SV) instead of SSH keys
-    - OS login allows using IAM roles to manage instances -> links linux account to Google identity
-    - if not possible, you can manage SSH key pairs
+- Google recommends using OS Login(or 2SV) instead of SSH keys
+  - OS login allows using IAM roles to manage instances -> links linux account to Google identity
+  - key management centralized via IAM and metadata
+  - allows for better auditability
+  - can enforce 2 factor authentication(2FA)
+
+For os login the following permissions are required:
+
+- `compute.osLogin` -> allows to use OS Login
+- `compute.osAdminLogin` -> allows to use OS Login with root(sudo) privileges
 
 VM access for Windows:
 
 - RDP(Remote Desktop Protocol) for windows
-  - allow firewall rule `tcp:3389` 
+  - allow firewall rule `tcp:3389`
     - if you want to access from powershell need to allow `tcp:5986`
-  - requires setting Windows password -> set by console or gcloud CLI tool
+  - requires setting Windows password -> set by console or gcloud CLI tool (`gcloud compute reset-windows-password ${instanceName} --zone ${zone}`)
   - login with [RDP chrome extension](https://chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai) or a 3rd party RDP client
   - Note that windows machines always come with an RDP client installed
 
@@ -108,3 +115,11 @@ Can be done without shutting down the machine with *Live Migration*:
 Instance can be restarted or deleted
 
 - Cost: resources attached to instance -> static IPs, disks
+
+## Instance live migration
+
+Google can move an instance from one zone to another in the same region without stopping it
+
+- uses the same hardware and network configuration
+- keeps the instance's internal state intact
+- transparent to the guest OS

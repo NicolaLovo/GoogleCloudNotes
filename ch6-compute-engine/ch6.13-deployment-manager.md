@@ -1,4 +1,4 @@
-# Deployment manager
+# Deployment manager or Cloud Foundation Toolkit
 
 Infrastructure as Code tool: automate deployment of Google Cloud resources
 
@@ -19,7 +19,7 @@ The spec must contain a `resources` section. Each resource must contain:
 
 ### Templates
 
-Parts of configuration that have been abstracted as building blocks in separate files 
+Parts of configuration that have been abstracted as building blocks in separate files
 
 - imported and used as a type in a configuration
 - can be written in Jinja(similar to yaml) or Python
@@ -41,4 +41,3 @@ Best practices:
 - preview deployments using the `--preview` flag
 - use Version Control to track deployment config changes
   - use CI/CD
-- 
