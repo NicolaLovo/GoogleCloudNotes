@@ -38,6 +38,13 @@ Identity that can access a resource
 
 Named collection of permissions that grants a set of operations(not necessarily matching to REST methods) to a resource. Cannot directly grant a permission, but a Role.
 
+Depending on where they are created, roles can be an **organization-level role** or a **project-level role**. For example:
+
+```sh
+gcloud iam roles create myRole --project=PROJECT_ID
+gcloud iam roles create myOrgRole --organization=ORG_ID
+```
+
 Can create a custom Role by combining multiple permissions. Naming convention:
 
 `${service}.${resource}.${verb}`
@@ -106,6 +113,21 @@ Resources inherit policies of their parent.
 
 Organization > Folder > Project > Resource
 
-## Demo
+## Policies transfer
 
-IAM&Admin > IAM
+With `gcloud iam roles copy` you can copy a **custom IAM role** from one project/Organization to another.
+
+```sh
+gcloud iam roles copy SOURCE_ROLE_ID \
+  --source=<PROJECT_ID or ORGANIZATION_ID> \
+  --destination=<PROJECT_ID or ORGANIZATION_ID> \
+  --destination-role=<NEW_ROLE_ID>
+```
+
+> [!IMPORTANT]
+> It does not work with predefined roles or primitive roles. It only works with custom roles.
+
+Use cases:
+
+- copy a role from one environment to another(e.g. dev to prod)
+- company A acquires company B and wants to copy the roles from B to A to ensure that all B's employees have the same access as before

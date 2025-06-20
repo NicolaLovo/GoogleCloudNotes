@@ -8,7 +8,7 @@ Example:
 
 Query policies:
 
-- `gcloud projects get-iam-policy ${projectId}` -> list policies attached to project
+- `gcloud projects get-iam-policy ${projectId}` -> list policies attached to project (accounts and roles)
 - `gcloud resource-manager folders get-iam-policy ${folderId}`
 - `gcloud organizations get-iam-policy ${organizationId}`
 

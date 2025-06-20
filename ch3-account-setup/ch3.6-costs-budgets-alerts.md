@@ -5,7 +5,7 @@
 Discounted prices when you commit to using a minimum level of resources for a specified term
 
 - 1 or 3 years commitment
-  
+
 Commitment types
 
 - spend-based
@@ -26,7 +26,7 @@ Available for:
 
 - cloud SQL
 - GC VMWare Engine
-But available only for CPU and memory usage
+  But available only for CPU and memory usage
 
 ### Resource-based commitment
 
@@ -78,6 +78,9 @@ Use budget alerts to stay informed about your spend if it exceed a threshold
 - notifications sent to project and billing administrators
 - recipients of this email can be customized (es. project manager)
 
+> [!NOTE]
+> A budget can be created for one/some/all projects and one/some/all services
+
 ### Scope of the budget
 
 Define a budget for the whole account, or be more granular for each project/product
@@ -85,8 +88,6 @@ Define a budget for the whole account, or be more granular for each project/prod
 > [!TIP]
 > Can use Pub/Sub for programmatic notifications or to automate cost management tasks
 > ![alt text](ch3.6-costs-budgets-alerts.summary.png)
-
-
 
 ## Demo
 
@@ -113,7 +114,6 @@ Monitoring > overview
 - go back to billing > create budget > select the monitoring channel
 
 ![alt text](ch3.6-costs-budgets-alerts.monitoring.channel.png)
-
 
 ### Reservations
 

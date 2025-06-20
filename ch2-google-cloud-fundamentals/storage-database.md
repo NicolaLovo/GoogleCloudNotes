@@ -56,10 +56,9 @@ Allow multiple instances to access the same data, but **not the same file at the
 > [!IMPORTANT]
 > Filestore is regional only, not global.
 
-
 ## Persistent Disks
 
-Durable block storage: raw storage capacity 
+Durable block storage: raw storage capacity
 Like a drive connected to an instance
 
 Options available depending on Zone and Region
@@ -72,11 +71,9 @@ Regular storage at a reasonable price
 
 Faster storage
 
-
 ## Database
 
 ### SQL/Relational
-
 
 #### Cloud SQL
 
@@ -115,3 +112,9 @@ Cluster resizing without downtime
 High-availability in-memory server for Redis and Memcached
 
 ![alt text](storage.png)
+
+## Transfer Appliance
+
+Way to physically transfer large amounts of data to Google Cloud. An "appliance" is a box, the size of a suitcase, that is shipped to the customer, filled with data, and then shipped back to Google Cloud.
+
+The appliance comes in 7TB, 40TB and 300TB size.
