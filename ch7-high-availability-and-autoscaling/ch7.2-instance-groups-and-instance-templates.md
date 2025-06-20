@@ -17,6 +17,8 @@ Collection of VMs that can be managed as a single entity
   - auto-updating
 - `Unmanaged Instance Groups(UIGs)` -> managed by the user
 
+An important osservation is that if _autoscaling is OFF_ in an instance group, you can still configure the minimum and maximum number of instances in the group, but they will not change automatically based on load.
+
 Use cases:
 
 - stateless server workloads -> web servers, web apps...

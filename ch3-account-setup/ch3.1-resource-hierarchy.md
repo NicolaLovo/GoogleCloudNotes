@@ -41,6 +41,17 @@ Contains all the resources of the organization
 
 NB: when an organization is created, an admin organization user is created
 
+#### Organization policies
+
+Set of rules that apply to all resources in the organization.
+
+- IAM -> focus on _who_ can access resources
+- Organization policies -> focus on _what_ can be done with resources, allow the administrator to set restrictions on specific resources to determine how they can be configured
+
+##### Domain restricted sharing
+
+`iam.managed.allowedPolicyMembers` managed constraint: allow granting IAM roles only to specified principals and principal sets(= groups of principals, e.g. all users in a domain) that are part of the same organization.
+
 ### Folders layer
 
 Grouping mechanism and isolation boundary

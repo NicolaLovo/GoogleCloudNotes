@@ -70,3 +70,19 @@ Only VMs with an internal IP address can use Private Google Access, this allows 
 - VMs with an external IP can still access Google APIs, but not from a private access
 
 ![alt text](ch5.2-routing-and-private-google-access.private-google-access.png)
+
+## Private Service Access
+
+Allows resources in a VPC to _connect privately_ to service producers in other VPCs (e.g. cloud Spanner, cloud SQL, etc.) via **VPC peering**.
+
+The benefit is that the traffic never leaves the VPC network, so it is more secure and faster.
+
+## Private Service Connect
+
+Modern evolution of Private Service Access, and Private Google Access. Allows to privately connect the VPC network to:
+
+- Google services and APIs (-> Private Google Access)
+- internal services in other VPCs (-> Private Service Access)
+- third party SaaS providers (e.g. MongoDB Atlas, etc.)
+
+It does NOT use VPC peering like Private Service Access, but uses a **Private Service Connect endooints**.

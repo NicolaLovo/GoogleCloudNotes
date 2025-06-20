@@ -11,6 +11,9 @@ Group of nodes that all have the same configuration
 - all new node pools run the latest version of kubernetes
   - existing node pools can be manually/automatically upgraded
 
+_Node Auto-repair_: automatically repairs nodes that are unhealthy or experience degraded performance.
+_Node Auto-upgrade_: automatically upgrades nodes to the latest version of kubernetes.
+
 ## Cluster types
 
 ### Zonal vs Regional
@@ -100,4 +103,3 @@ Nodes upgrade:
   - `max-unavailable-upgrade` -> # of nodes that can be simultaneously unavailable during an upgrade
     - the higher, the more disruptive it is
 - during the upgrade GKE brings down at most `max-surge-upgrade + max-unavailable-upgrade` nodes
-

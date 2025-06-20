@@ -2,7 +2,7 @@
 
 Kubernetes objects: persistent entities that represent the state of the cluster
 
-An object is a *Record of intent*: when created kubernetes will work to ensure that object exists
+An object is a _Record of intent_: when created kubernetes will work to ensure that object exists
 
 Each object has some fields:
 
@@ -45,7 +45,11 @@ A pod is ephemeral:
 - cannot heal
 - if deleted it cannot be recovered
 
+### Pod isolation
 
+Pods/containers are not totally isolated from the host machine. A solution is to use **gvisor**.
+
+Gvisor is a container sandbox developed by Google that provides higher isolation, by intercepting and emulating system calls made by the container.
 
 ## Namespaces
 
