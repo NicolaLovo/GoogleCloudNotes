@@ -26,9 +26,9 @@ Shielded boot process:
 
 - Secure boot -> verify signature for all boot components
 - Virtual Trusted Platform Module(vTPM) -> enables measured boot
-  - at the first boot, "Measure Boot" creates the *Integrity Policy Baseline* from these measures
+  - at the first boot, "Measure Boot" creates the _Integrity Policy Baseline_ from these measures
   - each time after that, a new measure is taken and stored
-- Integrity Monitoring -> relies on measures to enforce the *Integrity Policy Baseline*
+- Integrity Monitoring -> relies on measures to enforce the _Integrity Policy Baseline_
   - checks suspect changes in the boot procedure compared to the first boot sequence
 
 ### Running
@@ -43,8 +43,8 @@ From here it can transition to:
 2. Modify/Repair -> the instance is unusable, if it is still usable it will be running again
 3. Suspend -> preserves the guest OS and memory contents. From this state the VM can be Resumed or Deleted
 4. Stopping -> user requested a stop or there was a failure. Temporary status before terminating
-    - Cost: resources attached to instance -> static IPs, disks
-    - ephemeral external IPs are released
+   - Cost: resources attached to instance -> static IPs, disks
+   - ephemeral external IPs are released
 
 #### Startup script
 
@@ -102,13 +102,22 @@ VM access for Windows:
 
 Use cases: Google maintenance, migrate instance to a different zone in the same region
 
-Can be done without shutting down the machine with *Live Migration*:
+Can be done without shutting down the machine with _Live Migration_:
 
 - `gcloud compute instances move ${sourceVM} --zone ${sourceZone} --destination-zone ${destZone}`
 - keeps the instance running and keeps the whole instance state -> transparent to guest OS
 
 > [!IMPORTANT]
 > Instances with a GPU cannot be live migrated
+
+### Stopping
+
+When an instance is stopped you are not billed for vCPUs and memory, but you are still billed for:
+
+- resources attached to the instance -> static IPs, disks, GPUs
+- licences for the OS (e.g. Windows)
+
+When an instance is stopped you can **change its machine type**, **change network settings**, **attach disks**.
 
 ### Terminated
 
@@ -123,3 +132,12 @@ Google can move an instance from one zone to another in the same region without 
 - uses the same hardware and network configuration
 - keeps the instance's internal state intact
 - transparent to the guest OS
+
+How it works:
+
+- GCP notifies the instance that it is being migrated
+- copies memory and device state to the new host
+- switches the execution to the new host
+- keeps network connections intact
+
+It is not supported for spot and custom machine types.

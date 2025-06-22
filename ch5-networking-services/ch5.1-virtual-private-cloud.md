@@ -27,6 +27,8 @@ Allows to create networks inside google cloud with private and public connectivi
 
 Each VPC has a default route to the internet at `0.0.0.0/0` with the next hop being the default internet gateway.
 
+Note that you can create multiple subnets in the same region in a VPC, but they must not overlap in IP ranges.
+
 Example:
 
 ![VPC example](ch5.1-virtual-private-cloud.vpc-example.png)

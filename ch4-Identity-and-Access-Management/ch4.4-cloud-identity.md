@@ -10,6 +10,7 @@ IDentity-as-a-Service(IDaaS) solution that centrally manages users and groups:
 - security
 - reporting
 - Directory Management
+- offers accounts with custom domains for the company email addresses, e.g. `@mycompany.com`.
 
 How it works:
 
@@ -67,3 +68,11 @@ Free tool that syncs users data on Azure Active Directory with the cloud.
 Synchronization is one-way: from Azure to GC so that Azure AD is the single source of truth.
 
 Google services use ADFS to create a SSO experience.
+
+## Google Workspace
+
+Is a suite of productivity tools(gmail, drive, docs...) with identity management capabilities(IAM). Instead, Cloud Identity provides only identity management capabilities.
+
+Google Workspace **includes** Cloud Identity(which also has a free version), which can be upgraded to Google Workspace if needed --> _identity federation_:
+
+- every Google Workspace account is a Cloud Identity account

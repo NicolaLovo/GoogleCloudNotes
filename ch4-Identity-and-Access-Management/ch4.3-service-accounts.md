@@ -33,7 +33,7 @@ A service account is also a resource and have IAM policies for viewing/editing t
 - can grant access for a specific service account or all service accounts in the project to a user or group
 
 > [!IMPORTANT]
-> A user that has access to the service account, can indirectly access all resources that the service account can access: _Service account impersonation_
+> A user that has access to the service account, can indirectly access all resources that the service account can access: _Service account impersonation_. `gcloud auth activate-service-account ${email} --key-file=${keyFile}`
 
 ### Service account access scopes
 

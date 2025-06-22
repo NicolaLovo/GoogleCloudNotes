@@ -44,6 +44,15 @@ Similar to load balancing health checks, with differences:
 
 - load balancing does not direct traffic towards unhealthy VMs, it does not recreate the instance
 
+If an instance's process is stuck but the autohealer did not detect it, you can manually restart the instance:
+
+```sh
+gcloud compute instance-groups managed recreate-instances \
+    INSTANCE_GROUP_NAME \
+    --instances INSTANCE_NAME \
+    --zone ZONE
+```
+
 #### Regional(multi-zone) deployment
 
 Create Regional MIGs or Zonal MIGs

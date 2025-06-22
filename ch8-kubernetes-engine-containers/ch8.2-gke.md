@@ -61,7 +61,7 @@ Stores the state of the cluster:
 ## Nodes
 
 - run containerized apps
-- responsible for Docker runtime 
+- responsible for Docker runtime
 
 ### Components
 
@@ -88,6 +88,21 @@ GKE manages:
   - exposes the cluster IP
 - automates the kubernetes nodes by launching them as Compute Engine VMs
 - automates software updates
+
+### GKE standard
+
+GKE standard is the default GKE offering.
+
+#### Node Auto-Provisioning(NAP)
+
+Automatically provisions new node pools with optimal configurations when your workload exceeds available resources.
+
+E.g. I deploy a GPU workload an I don't have any GPU nodes in the cluster. NAP will automatically create a new node pool with GPU nodes. When I delete the workload, NAP will automatically delete the GPU node pool.
+
+Instead, the _Cluster Autoscaler_ is a Kubernetes mechanism that scales node count in existing node pools based on resource requests. It does not create new node pools.
+
+> [!NOTE]
+> It is **different** from **GKE Autopilot**. With autopilot you don't manage nodes at all.
 
 ### GKE enterprise
 
@@ -125,8 +140,8 @@ First, give the GKE node service account access to the Artifact Registry reposit
 Then simply use the required image in the spec, like this:
 
 ```yaml
-    spec:
-      containers:
-      - name: my-container
-        image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+spec:
+  containers:
+    - name: my-container
+      image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
 ```

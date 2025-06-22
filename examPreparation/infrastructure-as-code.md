@@ -23,6 +23,8 @@ Do NOT use it when:
 - you are not using GKE
 - you are already using terraform
 
+Note that when a resource is managed by Config Connector(e.g. a Pub/Sub topic), it CANNOT be deleted by the gcloud CLI, but only through `kubectl delete` commands.
+
 ## Cloud Foundation Toolkit
 
 It is being deprecated in favor of Infra Manager.
