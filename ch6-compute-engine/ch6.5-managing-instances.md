@@ -46,6 +46,15 @@ From here it can transition to:
    - Cost: resources attached to instance -> static IPs, disks
    - ephemeral external IPs are released
 
+Availability policies -> define what happens to the instance in response to infrastructure events(e.g. host maintenance) or instance termination:
+
+1. Host maintainance policy (for standard VMs)
+   1. _Live Migration_ (default) -> the instance is migrated to another host without stopping it
+   2. _Terminate_ -> the istance is stopped and must be restarted manually
+2. Instance termination policy (for spot VMs) -> what happens whe the VM is preempted
+   1. shutdown scripts
+   2. shutdown notice
+
 #### Startup script
 
 A guest environment on the OS is installed
@@ -124,6 +133,10 @@ When an instance is stopped you can **change its machine type**, **change networ
 Instance can be restarted or deleted
 
 - Cost: resources attached to instance -> static IPs, disks
+
+### Compute engine instance schedules
+
+Compute Engine instance schedules allow you to automatically start and stop instances at specific times(or cron expressions). Useful for batch jobs that have predictable duration and time of execution.
 
 ## Instance live migration
 

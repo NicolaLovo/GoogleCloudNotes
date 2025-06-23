@@ -1,6 +1,5 @@
 # Cloud billing
 
-
 Cloud billing account: defines who pays for a given set of GC resources, tracks all costs incurred by GC usage
 
 - linked to a payments profile
@@ -50,7 +49,6 @@ Flexibility to add other users to the payment profile
 > [!IMPORTANT]
 > Once the profile type is selected, it cannot be changed!!
 
-
 ## Demo
 
 1. ensure I have the right permissions to view, edit the billing account:
@@ -61,7 +59,6 @@ Flexibility to add other users to the payment profile
    5. Menu > Billing > Account management > Manage billing accounts
 
 > [!IMPORTANT]
-> A regular user needs the role Billing Account Administrator + Project Owner to change a billing account for a project
-
+> A regular user needs the role Billing Account User(allows to see the billing account and attach projects to it) + Project Billing Manager(allows to attach this project to a specified billing account) to change a billing account for a project
 
 ![alt text](ch3.5-cloud-billing.focus.png)

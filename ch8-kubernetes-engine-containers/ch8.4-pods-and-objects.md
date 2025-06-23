@@ -47,7 +47,7 @@ A pod is ephemeral:
 
 ### Pod isolation
 
-Pods/containers are not totally isolated from the host machine. A solution is to use **gvisor**.
+Pods/containers are not totally isolated from the host machine. A solution is **GKE sandbox** that uses **gvisor**.
 
 Gvisor is a container sandbox developed by Google that provides higher isolation, by intercepting and emulating system calls made by the container.
 
@@ -87,6 +87,18 @@ Objects that set deployment rules for pods
 - replaces instances that failed with new ones
 - use a pod template to specify how to generate a pod
 - best used for stateless apps
+
+Rolling deployments -> allow to update a deployment without servic disruption. In a deployment you can specify:
+
+```yaml
+strategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxSurge: 1 # Extra pods to add during update (beyond desired replicas)
+    maxUnavailable: 1 # How many pods can be unavailable during update
+```
+
+How to trigger a rolling update: `kubectl set image deployment/my-deployment my-container=my-image:v2`
 
 ### StatefulSets
 

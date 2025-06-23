@@ -47,3 +47,9 @@ Securely connects your peer network to your VPC through an IPsec VPN connection
   - Cloud Interconnect is more expensive
 - high speed/low latency not needed
 - outgoing traffic(egress) from GCP
+
+## Cloud Identity-Aware Proxy (IAP)
+
+Enforce identity-based access control to Google Cloud applications and services, without the need for a VPN.
+
+It sits in front of HTTPS and TCP services, authenticates using Google Identity and authorizes using IAM policies.
